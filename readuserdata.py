@@ -21,6 +21,7 @@ print(engine.table_names())
 table_name = 'sleep_data'
 df.to_sql(table_name, con, if_exists='replace')
 
+print("The tables list is:")
 print(engine.table_names())
 
 con.close()
