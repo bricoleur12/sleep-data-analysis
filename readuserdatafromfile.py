@@ -11,6 +11,7 @@ if ( dataset_file_location.find(".xlsx") > -1 ):
 elif ( dataset_file_location.find(".csv") > -1):
     df = pd.read_csv(dataset_file_location)
 
+
 # Connect to database (Note: The package psychopg2 is required for Postgres to work with SQLAlchemy)
 engine = sqlalchemy.create_engine("postgresql://postgres:admin@localhost/example")
 con = engine.connect()
