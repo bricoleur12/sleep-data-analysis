@@ -3,10 +3,18 @@
         <title>Sleep Data Analysis</title>
     </head>
     <body>
-        <ol>
+        <form action="/upload-userdatafile" method="post">
+        <label for="userdatafile">Select User Data File:</label>
+        <input type="file" id="userdatafile" name="userdatafile">
+        <br><br>
+        <input type="submit" value="upload-userdatafile">
+        </form>
+
+        <ul>
             {% for d in data %}
-            <li>{{ d.description }}</li>
+            <li>{{ d.name }}</li>
             {% endfor %}
-        </ol>
+
+        </ul>
     </body>
 </html>
